@@ -12,6 +12,7 @@
 		624194B01974E0F6002E0469 /* PhysicsGrabbing.m in Sources */ = {isa = PBXBuildFile; fileRef = 624194AF1974E0F6002E0469 /* PhysicsGrabbing.m */; };
 		624194B519758FFB002E0469 /* AnimationAndPhysics.m in Sources */ = {isa = PBXBuildFile; fileRef = 624194B419758FFB002E0469 /* AnimationAndPhysics.m */; };
 		624194B819759CC6002E0469 /* Kinematic_Static_Movement.m in Sources */ = {isa = PBXBuildFile; fileRef = 624194B719759CC6002E0469 /* Kinematic_Static_Movement.m */; };
+		624194BC1975C944002E0469 /* SpaceShip.m in Sources */ = {isa = PBXBuildFile; fileRef = 624194BB1975C944002E0469 /* SpaceShip.m */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -71,6 +72,8 @@
 		624194B419758FFB002E0469 /* AnimationAndPhysics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimationAndPhysics.m; path = Source/AnimationAndPhysics.m; sourceTree = "<group>"; };
 		624194B619759CC6002E0469 /* Kinematic_Static_Movement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Kinematic_Static_Movement.h; path = Source/Kinematic_Static_Movement.h; sourceTree = "<group>"; };
 		624194B719759CC6002E0469 /* Kinematic_Static_Movement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Kinematic_Static_Movement.m; path = Source/Kinematic_Static_Movement.m; sourceTree = "<group>"; };
+		624194BA1975C944002E0469 /* SpaceShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceShip.h; sourceTree = "<group>"; };
+		624194BB1975C944002E0469 /* SpaceShip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceShip.m; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -129,12 +132,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		624194A81974CE7C002E0469 /* Components */ = {
+		624194B91975C8BD002E0469 /* GameObjects */ = {
 			isa = PBXGroup;
 			children = (
+				624194BA1975C944002E0469 /* SpaceShip.h */,
+				624194BB1975C944002E0469 /* SpaceShip.m */,
 			);
-			name = Components;
-			path = Source/Components;
+			name = GameObjects;
+			path = Source/GameObjects;
 			sourceTree = "<group>";
 		};
 		9222E2B918734FF800A246C7 /* libs */ = {
@@ -148,7 +153,7 @@
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				624194A81974CE7C002E0469 /* Components */,
+				624194B91975C8BD002E0469 /* GameObjects */,
 				B737893D1807617C0076A88C /* AppDelegate.h */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				B7378992180767190076A88C /* MainScene.h */,
@@ -379,6 +384,7 @@
 				624194B01974E0F6002E0469 /* PhysicsGrabbing.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				624194B819759CC6002E0469 /* Kinematic_Static_Movement.m in Sources */,
+				624194BC1975C944002E0469 /* SpaceShip.m in Sources */,
 				624194A61974CC17002E0469 /* PhysicsMovement.m in Sources */,
 				624194AD1974D3E1002E0469 /* PhysicsImpulse_Force.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,

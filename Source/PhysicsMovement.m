@@ -26,11 +26,11 @@
 static void
 spaceShipVelocityUpdate(cpBody *body, cpVect gravity, cpFloat damping, cpFloat dt)
 {
+    // call default velocity function
     cpBodyUpdateVelocity(body, gravity, damping, dt);
     
-    CCNode *node = [[cpBodyGetUserData(body) userData] node];
-    
-	body->v.x = 100.f;
+    // set custom speed
+    body->v.x = 100.f;
     body->v.y = 0.f;
 }
 

@@ -20,6 +20,12 @@
 - (void)onEnter {
     [super onEnter];
     
+    CCNode *star;
+    
+    /* Don't calculate a collision with this object,
+     just call the collision handler methods. */
+    star.physicsBody.sensor = YES;
+    
     // impulses are applied immediately
     [_spaceShipImpulse.physicsBody applyImpulse:ccp(200.f, 0.f)];
     [_spaceShipImpulse.physicsBody applyAngularImpulse:2000];

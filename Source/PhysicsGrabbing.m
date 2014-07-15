@@ -7,36 +7,49 @@
 //
 
 #import "PhysicsGrabbing.h"
+#import "CCPhysics+ObjectiveChipmunk.h"
 
 @implementation PhysicsGrabbing {
-    CCNode *_spaceShipDrag;
-    BOOL _dragging;
-    CGPoint _touchOffset;
+	ChipmunkMultiGrab *_grab;
+    CCPhysicsNode *_physicsNode;
 }
 
-- (void)onEnter {
-    [super onEnter];
-        
-    self.userInteractionEnabled = YES;
+-(id)init
+{
+	if((self = [super init])){
+		self.userInteractionEnabled = YES;
+		self.multipleTouchEnabled = YES;
+	}
+	
+	return self;
 }
 
-- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
-    CGPoint touchLocation = [touch locationInNode:self];
-    
-    if (CGRectContainsPoint([_spaceShipDrag boundingBox], touchLocation)) {
-        _touchOffset = ccpSub(_spaceShipDrag.anchorPointInPoints, [touch locationInNode:_spaceShipDrag]);
-        _dragging = YES;
-    }
+-(void)onEnter
+{
+	_grab = [[ChipmunkMultiGrab alloc] initForSpace:_physicsNode.space withSmoothing:powf(0.1f, 15.0f) withGrabForce:1e5];
+	
+	[super onEnter];
 }
 
-- (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event {
-    if (_dragging) {
-        _spaceShipDrag.position = ccpAdd([touch locationInNode:self], _touchOffset);
-    }
+-(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{
+	[_grab beginLocation:[touch locationInNode:self]];
 }
 
-- (void)update:(CCTime)delta {
-    CCLOG(@"Speed: %f, %f", _spaceShipDrag.physicsBody.velocity.x, _spaceShipDrag.physicsBody.velocity.y);
+-(void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
+{
+	[_grab updateLocation:[touch locationInNode:self]];
 }
+
+-(void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+{
+	[_grab endLocation:[touch locationInNode:self]];
+}
+
+-(void)touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
+{
+	[self touchEnded:touch withEvent:event];
+}
+
 
 @end

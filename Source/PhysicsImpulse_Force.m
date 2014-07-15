@@ -28,12 +28,17 @@
     
     // impulses are applied immediately
     [_spaceShipImpulse.physicsBody applyImpulse:ccp(200.f, 0.f)];
+    
+    // impulses are applied immediately
     [_spaceShipImpulse.physicsBody applyAngularImpulse:2000];
 }
 
 - (void)update:(CCTime)delta {
-    // apply forces gradually
+    // apply forces gradually, e.g. apply a force while the player presses a button in a game to accelerate a spaceship
     [_spaceShipForce.physicsBody applyForce:ccp(200.f, 0.f)];
+    
+    // apply torque (basically a force changing the angular velocity) gradually, e.g. apply a force while the player presses a button in a game to accelerate a spaceship
+    [_spaceShipForce.physicsBody applyTorque:200];
 }
 
 @end

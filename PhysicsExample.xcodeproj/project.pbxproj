@@ -10,9 +10,8 @@
 		624194A61974CC17002E0469 /* PhysicsMovement.m in Sources */ = {isa = PBXBuildFile; fileRef = 624194A51974CC17002E0469 /* PhysicsMovement.m */; };
 		624194AD1974D3E1002E0469 /* PhysicsImpulse_Force.m in Sources */ = {isa = PBXBuildFile; fileRef = 624194AC1974D3E1002E0469 /* PhysicsImpulse_Force.m */; };
 		624194B01974E0F6002E0469 /* PhysicsGrabbing.m in Sources */ = {isa = PBXBuildFile; fileRef = 624194AF1974E0F6002E0469 /* PhysicsGrabbing.m */; };
-		624194B519758FFB002E0469 /* AnimationAndPhysics.m in Sources */ = {isa = PBXBuildFile; fileRef = 624194B419758FFB002E0469 /* AnimationAndPhysics.m */; };
-		624194B819759CC6002E0469 /* Kinematic_Static_Movement.m in Sources */ = {isa = PBXBuildFile; fileRef = 624194B719759CC6002E0469 /* Kinematic_Static_Movement.m */; };
 		624194BC1975C944002E0469 /* SpaceShip.m in Sources */ = {isa = PBXBuildFile; fileRef = 624194BB1975C944002E0469 /* SpaceShip.m */; };
+		624194C11975ED40002E0469 /* TestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 624194C01975ED40002E0469 /* TestScene.m */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -68,12 +67,10 @@
 		624194AC1974D3E1002E0469 /* PhysicsImpulse_Force.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhysicsImpulse_Force.m; path = Source/PhysicsImpulse_Force.m; sourceTree = "<group>"; };
 		624194AE1974E0F6002E0469 /* PhysicsGrabbing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhysicsGrabbing.h; path = Source/PhysicsGrabbing.h; sourceTree = "<group>"; };
 		624194AF1974E0F6002E0469 /* PhysicsGrabbing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhysicsGrabbing.m; path = Source/PhysicsGrabbing.m; sourceTree = "<group>"; };
-		624194B319758FFB002E0469 /* AnimationAndPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnimationAndPhysics.h; path = Source/AnimationAndPhysics.h; sourceTree = "<group>"; };
-		624194B419758FFB002E0469 /* AnimationAndPhysics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnimationAndPhysics.m; path = Source/AnimationAndPhysics.m; sourceTree = "<group>"; };
-		624194B619759CC6002E0469 /* Kinematic_Static_Movement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Kinematic_Static_Movement.h; path = Source/Kinematic_Static_Movement.h; sourceTree = "<group>"; };
-		624194B719759CC6002E0469 /* Kinematic_Static_Movement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Kinematic_Static_Movement.m; path = Source/Kinematic_Static_Movement.m; sourceTree = "<group>"; };
 		624194BA1975C944002E0469 /* SpaceShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceShip.h; sourceTree = "<group>"; };
 		624194BB1975C944002E0469 /* SpaceShip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceShip.m; sourceTree = "<group>"; };
+		624194BF1975ED40002E0469 /* TestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestScene.h; path = Source/TestScene.h; sourceTree = "<group>"; };
+		624194C01975ED40002E0469 /* TestScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestScene.m; path = Source/TestScene.m; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -164,10 +161,8 @@
 				624194AC1974D3E1002E0469 /* PhysicsImpulse_Force.m */,
 				624194AE1974E0F6002E0469 /* PhysicsGrabbing.h */,
 				624194AF1974E0F6002E0469 /* PhysicsGrabbing.m */,
-				624194B319758FFB002E0469 /* AnimationAndPhysics.h */,
-				624194B419758FFB002E0469 /* AnimationAndPhysics.m */,
-				624194B619759CC6002E0469 /* Kinematic_Static_Movement.h */,
-				624194B719759CC6002E0469 /* Kinematic_Static_Movement.m */,
+				624194BF1975ED40002E0469 /* TestScene.h */,
+				624194C01975ED40002E0469 /* TestScene.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -380,14 +375,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
-				624194B519758FFB002E0469 /* AnimationAndPhysics.m in Sources */,
 				624194B01974E0F6002E0469 /* PhysicsGrabbing.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
-				624194B819759CC6002E0469 /* Kinematic_Static_Movement.m in Sources */,
 				624194BC1975C944002E0469 /* SpaceShip.m in Sources */,
 				624194A61974CC17002E0469 /* PhysicsMovement.m in Sources */,
 				624194AD1974D3E1002E0469 /* PhysicsImpulse_Force.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
+				624194C11975ED40002E0469 /* TestScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "CCNode.h"
+#import "TestScene.h"
 
-@interface PhysicsMovement : CCNode
+@interface PhysicsMovement : TestScene
 
 @end

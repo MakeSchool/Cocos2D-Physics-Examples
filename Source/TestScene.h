@@ -1,5 +1,5 @@
 //
-//  AnimationsAndPhysics.h
+//  TestScene.h
 //  PhysicsExample
 //
 //  Created by Benjamin Encz on 15/07/14.
@@ -8,6 +8,6 @@
 
 #import "CCNode.h"
 
-@interface AnimationAndPhysics : CCNode <CCBAnimationManagerDelegate>
+@interface TestScene : CCNode
 
 @end

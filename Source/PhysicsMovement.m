@@ -27,13 +27,12 @@
     CCActionMoveBy *moveRight = [CCActionMoveBy actionWithDuration:1.f position:ccp(_spaceShipAction.constantVelocity.x, _spaceShipAction.constantVelocity.y)];
     CCActionRepeatForever *repeatMovement = [CCActionRepeatForever actionWithAction:moveRight];
     [_spaceShipAction runAction:repeatMovement];
-    _spaceShipAction.physicsBody.type = CCPhysicsBodyTypeKinematic;
-    
     
     /*
         We are moving the second space ship (_spaceShipVelocity) with a velocity update function. The velocity update function for this spaceship is part of
         in  this class (PhysicsMovement) and called 'spaceShipVelocityUpdate'. Whenever the physics engine wants to know the speed of the spaceship it will call 
-        that function. Inside that function we can choose whichever speed we want for our _spaceShipVelocity
+        that function. Inside that function we can choose whichever speed we want for our _spaceShipVelocity.
+        The velocity update function is called once a frame.
      */
     _spaceShipVelocity.physicsBody.body.body->velocity_func = spaceShipVelocityUpdate;
 }

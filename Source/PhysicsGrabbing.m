@@ -35,4 +35,8 @@
     }
 }
 
+- (void)update:(CCTime)delta {
+    CCLOG(@"Speed: %f, %f", _spaceShipDrag.physicsBody.velocity.x, _spaceShipDrag.physicsBody.velocity.y);
+}
+
 @end

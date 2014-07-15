@@ -19,6 +19,7 @@
     CCActionMoveBy *moveRight = [CCActionMoveBy actionWithDuration:1.f position:ccp(100, 0)];
     CCActionRepeatForever *repeatMovement = [CCActionRepeatForever actionWithAction:moveRight];
     [_spaceShipAction runAction:repeatMovement];
+    _spaceShipAction.physicsBody.type = CCPhysicsBodyTypeKinematic;
     
     _spaceShipVelocity.physicsBody.body.body->velocity_func = spaceShipVelocityUpdate;
 }

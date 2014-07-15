@@ -430,10 +430,11 @@ static void PhysicsSeparate(cpArbiter *arb, cpSpace *space, CCPhysicsCollisionHa
     for(CCNode * node in tempKinetics)
     {
         NSAssert(node.physicsBody, @"Should have a physics body");
-        NSAssert(node.physicsBody.type == CCPhysicsBodyTypeKinematic, @"Should be kinematic");
+//        NSAssert(node.physicsBody.type == CCPhysicsBodyTypeKinematic, @"Should be kinematic");
         
-        [node.physicsBody updateKinetics:delta];
-        if(node.physicsBody.type != CCPhysicsBodyTypeKinematic)
+        if (node.physicsBody.type == CCPhysicsBodyTypeKinematic) {
+            [node.physicsBody updateKinetics:delta];
+        } else if(node.physicsBody.type != CCPhysicsBodyTypeKinematic)
         {
             [_kineticNodes removeObject:node];
         }

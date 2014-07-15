@@ -25,4 +25,14 @@
     [[CCDirector sharedDirector] replaceScene:physicsGrabbing];
 }
 
+- (void)animationAndPhysics {
+    CCScene *animationAndPhysics = [CCBReader loadAsScene:@"AnimationAndPhysics"];
+    [[CCDirector sharedDirector] replaceScene:animationAndPhysics];
+}
+
+- (void)kinematic_static_movement {
+    CCScene *kinematic_static_movement = [CCBReader loadAsScene:@"Kinematic_Static_Movement"];
+    [[CCDirector sharedDirector] replaceScene:kinematic_static_movement];
+}
+
 @end
